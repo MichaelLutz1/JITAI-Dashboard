@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/stylesheets/home.css" />
+  </head>
+  <body>
+    <main>
+      <div class="banner">
+        <p class="title">MPAS DASHBOARD</p>
+      </div>
+      <div class="login">
+          <img src="../static/images/Walkitlogitlogo.png" alt="Walk it log it logo">
+          <input type="password" name="password" placeholder="Password" class="password"/>
+          <input type="submit" value="Submit" class="submit"/>
+      </div>
+    </main>
+  </body>
+    <script>
+      console.log('hello');
+      const button = document.querySelector('.submit');
+      button.addEventListener('click', () => {
+        window.location.href = '/dashboard'
+      });
+    </script>
+</html>

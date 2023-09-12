@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+:root {
+  --main-background: #f8f9fa;
+  --green: #4fd1c5;
+  --grey: #a0aec0;
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --zero: lightgray;
+  --sedentary: rgb(101, 209, 245);
+  --light: rgb(95, 255, 47);
+  --moderate: rgb(255, 121, 68);
+  --vigorous: rgb(252, 51, 51);
+}
+html {
+  background-color: var(--main-background);
+}
+body {
+  height: 100vh;
+}
+svg{
+  display: block;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "roboto", sans-serif;
+}
+section {
+  height: 100%;
+  margin-left: 12.5rem;
+  margin-right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+table {
+  border-collapse: collapse;
+  padding: 10px;
+}
+thead {
+  position: sticky;
+  top: 0;
+  background-color: var(--main-background);
+}
+
+td > input {
+  width: 3rem;
+}
+input[type="date"] {
+  position: relative;
+  background-color: var(--green);
+  border: none;
+  box-shadow: var(--shadow);
+  padding: 0px 1px 0px 10px;
+  height: 30px;
+  border-radius: 5px;
+  color: white;
+  font-size: 10px;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  opacity: 0%;
+  width: 100%;
+  height: 100%;
+}
+select {
+  background-color: var(--green);
+  border: none;
+  box-shadow: var(--shadow);
+  color: white;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+th,
+td {
+  padding: 16px 8px 16px 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+td {
+  border-top: 1px solid #ddd;
+}
+
+th {
+  color: var(--grey);
+}
+button {
+  padding: 5px 20px;
+  background-color: var(--green);
+  border-radius: 6px;
+  border: none;
+  box-shadow: var(--shadow);
+  color: white;
+  transition: all 0.2s ease;
+}
+button:hover {
+  scale: 1.07;
+}
+button > svg {
+  padding-top: 2px;
+  fill: white;
+}
+
+#table-container {
+  height: 73vh;
+  width: 100%;
+  padding: 30px;
+  padding-bottom: 10px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+#dashboard-table-container {
+  height: 85vh;
+  width: 100%;
+  padding: 30px;
+  padding-bottom: 10px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+#data-container {
+  position: relative;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+#data-container > table {
+  min-height: 100%;
+  width: 100%;
+}
+#data-container > * {
+  font-size: 12px;
+}
+#form {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+}
+#key {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+#key > * {
+  font-size: 10px;
+  font-weight: 300;
+}
+.key-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.key-color {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 100%;
+}
+.zero {
+  background-color: var(--zero) !important;
+}
+.sedentary {
+  background-color: var(--sedentary);
+}
+.light {
+  background-color: var(--light);
+}
+.moderate {
+  background-color: var(--moderate);
+}
+.vigorous {
+  background-color: var(--vigorous);
+}
+.accelerometery,
+.gyroscope,
+.magnetometer {
+  border-left: 1px dashed #ddd;
+  border-right: 1px dashed #ddd;
+}
+
+.form-element {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: white;
+  padding: 7px 13px;
+  border-radius: 7px;
+  box-shadow: var(--shadow);
+  font-size: 12px;
+}
+.form-element-search {
+  align-self: center;
+}
+.form-element-search > button {
+  padding: 10px 10px;
+}
+.none {
+  display: none;
+}
+/* .minutelevel > button { */
+/*   padding: 5px 8px; */
+/* } */
+.id {
+  text-align: left;
+  font-size: 16px;
+}
+.table-name {
+  font-size: 1.25rem !important;
+  font-weight: 900;
+  position: relative;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.arrows{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  gap: 7px;
+}
+.arrows p{
+  font-size: 12px;
+}
+.arrows div:hover{
+  cursor: pointer;
+  scale: 1.05;
+}
+.page-name {
+  margin: 20px 0;
+  padding: 10px 0;
+  font-size: 12px;
+  color: var(--grey);
+  position: relative;
+}
+.page-name > span {
+  font-size: 12px;
+  color: black;
+}
+.sidebar {
+  position: fixed;
+  height: 100vh;
+  width: 12rem;
+  background-color: #f8f9fa;
+  padding: 1rem;
+}
+.pages {
+  margin-top: 25px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.logo {
+  font-weight: bold;
+  text-align: center;
+  padding: 25px 0;
+  position: relative;
+  font-size: 1.5rem;
+}
+.divider {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border: 1px solid var(--grey);
+  border-radius: 100%;
+  opacity: 50%;
+}
+.nav-item {
+  color: var(--grey);
+  border-radius: 12px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+}
+.nav-item > div > svg {
+  fill: var(--green);
+  display: block;
+}
+.nav-item > .icon {
+  padding: 8px;
+  background-color: white;
+  box-shadow: var(--shadow);
+  border-radius: 35%;
+}
+.page {
+  font-size: 0.7rem;
+  padding-left: 7px;
+  white-space: nowrap;
+}
+.participantid {
+  text-align: left;
+}
+.nav-item:hover {
+  background-color: #ffffff;
+  color: black;
+  box-shadow: var(--shadow);
+}
+.nav-item:hover > .icon > svg {
+  fill: white;
+}
+.nav-item:hover > .icon {
+  background-color: var(--green);
+}
+.active {
+  background-color: white;
+  color: black;
+  box-shadow: var(--shadow);
+}
+.active > .icon > svg {
+  fill: white;
+}
+.active > .icon {
+  background-color: var(--green);
+}
